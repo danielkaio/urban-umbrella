@@ -1,14 +1,11 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post, Put } from "@nestjs/common";
-import { ApiCreatedResponse, ApiHeader, ApiOperation, ApiResponse } from "@nestjs/swagger";
-import { PessoaRepository } from "src/Reposytory/PessoaRepository";
-import {Pessoa} from 'src/pessoa'
+import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import { ApiCreatedResponse, ApiHeader, ApiOperation } from '@nestjs/swagger';
+import { PessoaRepository } from 'src/Reposytory/PessoaRepository';
+import { Pessoa } from 'src/pessoa';
 
-
-
-@Controller("/pessoas")
+@Controller('/pessoas')
 export class PessoaController {
-
-    constructor(private pessoaReposytory: PessoaRepository) { }
+  constructor(private pessoaReposytory: PessoaRepository) {}
 
     @ApiOperation({ summary: "list people" })
     @Get()
@@ -42,4 +39,3 @@ export class PessoaController {
 
 
 }
-
