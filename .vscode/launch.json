@@ -9,6 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "runtimeExecutable": "/home/daniel/.nvm/versions/node/v23.9.0/bin/node",
             "skipFiles": [
                 "<node_internals>/**"
             ],

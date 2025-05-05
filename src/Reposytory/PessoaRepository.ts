@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Pessoa } from 'src/interface.pessoa';
+import { Pessoa } from 'src/pessoa';
 import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
@@ -27,7 +27,7 @@ export class PessoaRepository {
     const pessoaAtualizada = {
       ...this.pessoas[PessoaId],
       ...dadosAtualizados,
-      id: this.pessoas[PessoaId].id, // garante que o ID original não seja alterado
+      id: this.pessoas[PessoaId].id,
     };
 
     this.pessoas[PessoaId] = pessoaAtualizada;
